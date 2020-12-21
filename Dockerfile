@@ -14,7 +14,7 @@ RUN apt-get update \
   libncurses-dev \
   flex \
   bison \
-  gperfm \
+  gperf \
   python \
   python-pip \
   python-setuptools \
