@@ -31,7 +31,7 @@ RUN curl -O ${TOOLCHAIN_URL}${TOOLCHAIN_FILE}
 RUN pwd \
   && mkdir -p ~/esp \
   && cd ~/esp \
-  && tar -xzf ~/${TOOLCHAIN_FILE}
+  && tar -xzf /${TOOLCHAIN_FILE}
   
 # Set the path
 # export PATH="$HOME/esp/xtensa-esp32-elf/bin:$PATH"
