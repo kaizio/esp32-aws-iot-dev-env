@@ -7,7 +7,7 @@ ARG TOOLCHAIN_FILE="xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz"
 
 # Install Prerequisites
 RUN apt-get update \
-  && apt-get install \
+  && apt-get install -y \
   git \
   wget \
   curl \
