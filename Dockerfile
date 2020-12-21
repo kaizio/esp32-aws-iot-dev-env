@@ -6,7 +6,8 @@ ARG TOOLCHAIN_FILE="xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz"
 # https://docs.espressif.com/projects/esp-idf/en/v3.3/get-started-cmake/linux-setup.html
 
 # Install Prerequisites
-RUN apt-get install \
+RUN apt-get update \
+  && apt-get install \
   git \
   wget \
   curl \
