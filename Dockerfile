@@ -27,7 +27,8 @@ RUN apt-get update \
   ccache
   
 # Toolchain Setup
-RUN curl -O ${TOOLCHAIN_URL}${TOOLCHAIN_FILE} \
+RUN curl -O ${TOOLCHAIN_URL}${TOOLCHAIN_FILE}
+RUN pwd \
   && mkdir -p ~/esp \
   && cd ~/esp \
   && tar -xzf ~/${TOOLCHAIN_FILE}
