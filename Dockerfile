@@ -1,6 +1,7 @@
 FROM debian:10
 ARG TOOLCHAIN_URL="https://dl.espressif.com/dl/"
 ARG TOOLCHAIN_FILE="xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz"
+ENV PATH="${HOME}/esp/xtensa-esp32-elf/bin:${PATH}"
 
 # Following Guide from:
 # https://docs.espressif.com/projects/esp-idf/en/v3.3/get-started-cmake/linux-setup.html
