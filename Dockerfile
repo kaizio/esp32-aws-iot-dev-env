@@ -33,8 +33,9 @@ RUN pwd \
   && mkdir -p ~/esp \
   && cd ~/esp \
   && tar -xzf /${TOOLCHAIN_FILE}
-  
-# Set the path
-# export PATH="$HOME/esp/xtensa-esp32-elf/bin:$PATH"
-# alias get_esp32='export PATH="$HOME/esp/xtensa-esp32-elf/bin:$PATH"'
+
+RUN cd ~ \
+  && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
+  && unzip awscliv2.zip \
+  && ./aws/install
 
