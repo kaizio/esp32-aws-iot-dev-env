@@ -3,6 +3,13 @@ ARG TOOLCHAIN_URL="https://dl.espressif.com/dl/"
 ARG TOOLCHAIN_FILE="xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz"
 ENV PATH="/root/esp/xtensa-esp32-elf/bin:${PATH}"
 
+ARG UNAME=esp32
+ARG UID=1001
+ARG GID=1001
+RUN groupadd -g $GID -o $UNAME
+RUN useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
+USER $UNAME
+
 # Following Guide from:
 # https://docs.espressif.com/projects/esp-idf/en/v3.3/get-started-cmake/linux-setup.html
 
